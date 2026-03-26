@@ -1,20 +1,14 @@
-import { Button, Container, Typography } from "@mui/material";
+import { MainProvider } from "./hooks/main-provider";
+import Container from "./components/container";
+import Body from "./components/body/body";
 
 function App() {
   return (
-    <Container>
-      <Typography variant="h4" gutterBottom>
-        Hello Material UI
-      </Typography>
-
-      <Button variant="contained" color="primary">
-        Botão Primário
-      </Button>
-
-      <Button variant="outlined" color="secondary" style={{ marginLeft: 10 }}>
-        Botão Secundário
-      </Button>
-    </Container>
+    <MainProvider>
+      <Container>
+        <Body />  
+      </Container>
+    </MainProvider>
   );
 }
 
