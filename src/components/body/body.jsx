@@ -23,6 +23,38 @@ export default function Body() {
 
   return (
     <div className="pdi-root">
+      <header className="pdi-header">
+        <div className="pdi-header-left">
+          <div className="pdi-header-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <div className="pdi-header-text">
+            <h1 className="pdi-header-title">Detecção de Linhas de Plantio</h1>
+            <p className="pdi-header-subtitle">
+              Pipeline de processamento digital de imagens para identificação automática de fileiras em lavouras a partir de fotos aéreas de drone.
+            </p>
+          </div>
+        </div>
+        <div className="pdi-header-badges">
+          <span className="pdi-header-badge">
+            <span className="pdi-header-badge-dot" />
+            OpenCV
+          </span>
+          <span className="pdi-header-badge">
+            <span className="pdi-header-badge-dot" />
+            Hough Transform
+          </span>
+          <span className="pdi-header-badge">
+            <span className="pdi-header-badge-dot" />
+            Morfologia
+          </span>
+        </div>
+      </header>
+
       <div className="pdi-main">
 
         <div className="pdi-panel">

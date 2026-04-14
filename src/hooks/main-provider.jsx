@@ -8,13 +8,19 @@ const ETAPAS_LABELS = [
     "Convertendo para escala de cinza...",
     "Aplicando filtro de média...",
     "Aplicando filtro gaussiano...",
-    "Aplicando filtro de mediana...",
     "Detectando bordas com Sobel...",
-    "Aplicando filtro Laplaciano...",
-    "Calculando diferença absoluta...",
-    "Aplicando erosão morfológica...",
-    "Aplicando dilatação morfológica...",
-    "Executando análise ELA...",
+    "Binarização...",
+    "Fechamento morfológico...",
+    "Erosão morfológica...",
+    "Dilatação morfológica...",
+    "Transformada de Hough...",
+    "Agrupamento de linhas...",
+    "Cálculo de espaçamento...",
+    "Cálculo de desvio padrão...",
+    "Cálculo de coeficiente de variação...",
+    "Cálculo de média de espaçamento...",
+    "Cálculo de desvio padrão de espaçamento...",
+    "Cálculo de coeficiente de variação de espaçamento...",
 ];
 
 export function MainProvider({ children }) {
@@ -62,7 +68,7 @@ export function MainProvider({ children }) {
                     clearInterval(interval);
                     resolve();
                 }
-            }, 1000);
+            }, 500);
         });
 
         try {
