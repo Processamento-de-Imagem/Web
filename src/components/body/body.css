@@ -161,8 +161,32 @@
 }
 
 @media (max-width: 768px) {
+  .pdi-root {
+    position: static;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
   .pdi-main {
     grid-template-columns: 1fr;
+  }
+
+  .pdi-panel-body {
+    min-height: 320px;
+  }
+
+  .pdi-preview-img,
+  .pdi-result-img {
+    min-height: 260px;
+  }
+
+  .pdi-carousel-img-wrap {
+    min-height: 260px;
+  }
+
+  .pdi-upload-zone {
+    min-height: 260px;
   }
 }
 
@@ -270,6 +294,7 @@
   justify-content: flex-end;
   gap: 12px;
   flex-shrink: 0;
+  margin-bottom: 20px;
 }
 
 .pdi-btn-process {

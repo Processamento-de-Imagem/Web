@@ -75,7 +75,7 @@ export function MainProvider({ children }) {
             const data = await dataPromise;
             setOutputImage(data.etapas);
         } catch (err) {
-            console.error("Erro ao processar imagem:", err);
+            console.error("Falha no processamento da imagem:", err);
         } finally {
             setIsProcessing(false);
             setProcessingLabel("");

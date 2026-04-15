@@ -83,9 +83,9 @@ export default function Body() {
       <div className="pdi-main">
         <div className="pdi-panel">
           <div className="pdi-panel-header">
-            <span className="pdi-panel-title">Entrada</span>
+            <span className="pdi-panel-title">Imagem de entrada</span>
             {inputImage && (
-              <span className="pdi-tag pdi-tag-ready">Pronto</span>
+              <span className="pdi-tag pdi-tag-ready">Carregada</span>
             )}
           </div>
           <div className="pdi-panel-body">
@@ -118,8 +118,8 @@ export default function Body() {
                   />
                 </svg>
                 <div className="pdi-upload-text">
-                  <strong>Carregar imagem</strong>
-                  <span>Clique ou arraste aqui</span>
+                  <strong>Selecionar imagem</strong>
+                  <span>Clique para procurar ou arraste o arquivo</span>
                 </div>
               </div>
             )}
@@ -137,11 +137,11 @@ export default function Body() {
           <div className="pdi-panel-header">
             <span className="pdi-panel-title">Resultado</span>
             {outputState === "processing" && (
-              <span className="pdi-tag pdi-tag-pending">Processando</span>
+              <span className="pdi-tag pdi-tag-pending">Em execução</span>
             )}
             {outputState === "done" && (
               <span className="pdi-tag pdi-tag-done">
-                Etapa {carouselIdx + 1} de {outputImage.length}
+                Etapa {carouselIdx + 1} / {outputImage.length}
               </span>
             )}
           </div>
@@ -230,7 +230,7 @@ export default function Body() {
                 </div>
                 {isLastStep && (
                   <button className="pdi-btn-download" onClick={handleDownload}>
-                    Baixar imagem final
+                    Exportar resultado final
                   </button>
                 )}
               </div>
@@ -295,7 +295,7 @@ export default function Body() {
         </button>
         {(inputImage || outputImage) && (
           <button className="pdi-btn-clear" onClick={handleClear}>
-            Limpar
+            Limpar sessão
           </button>
         )}
       </div>
